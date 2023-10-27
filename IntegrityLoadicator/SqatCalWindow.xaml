@@ -1,0 +1,46 @@
+﻿<Window x:Class="ZebecLoadMaster.SqatCalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Squat Calculation" Height="400" Width="719" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" FlowDirection="LeftToRight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" Background="LightGray" FontFamily="Calibri" Loaded="Window_Loaded">
+    <Grid Height="326" Name="grid1" Width="673" Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="76*" />
+            <ColumnDefinition Width="223*" />
+            <ColumnDefinition Width="286*" />
+            <ColumnDefinition Width="54*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="22*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="42*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="101*" />
+        </Grid.RowDefinitions>
+        <TextBox Text="" Height="24" HorizontalAlignment="Left" Name="txtCB" VerticalAlignment="Top" Width="156" Grid.Column="2" Grid.Row="3" Margin="7,4,0,0" BorderBrush="Black"  PreviewTextInput="txtCB_PreviewTextInput"/>
+        <TextBox Text="" Height="24" HorizontalAlignment="Left" Margin="7,6,0,0" Name="txtVsSpeed" VerticalAlignment="Top" Width="156" Grid.Column="2" Grid.Row="4" BorderBrush="Black" PreviewTextInput="txtCB_PreviewTextInput" />
+        <TextBox Text="" Height="24" HorizontalAlignment="Left" Margin="7,8,0,0" Name="txtxWtDepth" VerticalAlignment="Top" Width="156" Grid.Column="2" Grid.Row="5" BorderBrush="Black" PreviewTextInput="txtCB_PreviewTextInput" />
+        <WrapPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="7" Height="42" HorizontalAlignment="Left" Margin="75,0,0,13" Name="wrapPanel1" VerticalAlignment="Bottom" Width="330">
+            <Button Content="Calculate" Height="36" Name="btnUpdate" Width="93"  Margin=" 20,2,0,0" Click="btnUpdate_Click" />
+            <Button Content="Exit" Height="36" Name="btnExit" Width="93" Margin="15,2,0,0" Click="btnExit_Click" />
+            <Button Content="Clear" Height="36" Name="btnclear" Width="93" Margin="13,2,0,0" Click="btnclear_Click" />
+        </WrapPanel>
+        <RadioButton Content="Confined water" Grid.Column="2" Grid.Row="1" Height="16" HorizontalAlignment="Left" Margin="55,5,0,0" Name="rbConfined" VerticalAlignment="Top" Grid.RowSpan="2" />
+        <RadioButton Content="Open Water" Grid.Column="2" Grid.Row="2" Height="16" HorizontalAlignment="Left" Margin="55,3,0,0" Name="rbOpenWater" VerticalAlignment="Top" />
+        <Label Content="CB" Grid.Column="1" Grid.Row="3" Height="28" HorizontalAlignment="Left" Margin="1,2,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Vessel Speed" Height="28" HorizontalAlignment="Left" Margin="1,6,0,0" Name="label2" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" />
+        <Label Content="Water Depth" Height="28" HorizontalAlignment="Left" Margin="2,6,0,0" Name="label3" VerticalAlignment="Top" Grid.Column="1" Grid.Row="5" />
+        <TextBox  Text="" BorderBrush="Black" Grid.Column="3" Height="24" HorizontalAlignment="Left" Margin="112,4,0,0" Name="txtBrShip" VerticalAlignment="Top" Width="156" Grid.Row="3" PreviewTextInput="txtCB_PreviewTextInput" />
+        <TextBox Text="0" BorderBrush="Black" Grid.Column="3" Grid.Row="4" Height="24" HorizontalAlignment="Left" Margin="112,6,0,0" Name="txtCanWidth" VerticalAlignment="Top" Width="156" PreviewTextInput="txtCB_PreviewTextInput" />
+        <TextBox Text="" BorderBrush="Black" Grid.Column="3" Grid.Row="5" Height="24" HorizontalAlignment="Left" Margin="112,7,0,0" Name="txtDraftAP" VerticalAlignment="Top" Width="50" PreviewTextInput="txtCB_PreviewTextInput"/>
+        <Label Content="Breadth Of The Ship" Height="28" HorizontalAlignment="Left" Margin="3,2,0,0" Name="label4" VerticalAlignment="Top" Grid.Column="3" Grid.Row="3" />
+        <Label Content="Canal Width" Grid.Row="4" Height="28" HorizontalAlignment="Left" Margin="3,6,0,0" Name="label5" VerticalAlignment="Top" Grid.Column="3" />
+        <Label Content="Draft AP" Grid.Row="5" Height="28" HorizontalAlignment="Left" Margin="25,6,0,0" Name="label6" VerticalAlignment="Top" Grid.Column="3" />
+        <TextBox Text="" BorderBrush="Black" Grid.Column="3" Height="24" HorizontalAlignment="Left" Margin="217,7,0,0" Name="txtDraftFP" VerticalAlignment="Top" Width="51" Grid.Row="5" PreviewTextInput="txtCB_PreviewTextInput" />
+        <Label Content="Draft FP" Height="28" HorizontalAlignment="Left" Margin="162,6,0,0" Name="label7" VerticalAlignment="Top" Grid.Column="3" Grid.Row="5" />
+        <Label Content="" Grid.ColumnSpan="2" Margin="112,12,162,61" Name="lblcalc" Grid.Column="2" Grid.Row="7" FontWeight="Bold" HorizontalContentAlignment="Center" />
+    </Grid>
+</Window>

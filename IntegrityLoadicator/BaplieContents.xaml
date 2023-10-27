@@ -1,0 +1,34 @@
+﻿<Window x:Class="ZebecLoadMaster.BaplieContents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BaplieContents" WindowStartupLocation="CenterScreen" Height="650" Width="550">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="24" />-->
+            <RowDefinition Height="40" />
+            <RowDefinition Height="500*" />
+            <!--<RowDefinition Height="46*" />-->
+        </Grid.RowDefinitions>
+        <Button  Width="110" Content="Update Database" Click="Update_Click"/>
+        <DataGrid DataGridCell.Selected="DataGrid_GotFocus"  Grid.Row="1" AutoGenerateColumns="False" Name="dataGridBaplieContents"   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" BeginningEdit="dataGridBaplieContents_BeginningEdit" KeyDown="dataGridBaplieContents_KeyDown"  CurrentCellChanged="dataGridBaplieContents_CurrentCellChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Container_ID" Binding="{Binding Path=ContainerID}" Width="25*" >
+                </DataGridTextColumn>
+                <DataGridTextColumn Visibility="Collapsed" Header="Bay" Binding="{Binding Path=Bay}" Width="30*">
+                </DataGridTextColumn>
+                <DataGridTextColumn Visibility="Collapsed" Header="Stack" Binding="{Binding Path=Stack}" Width="20*">
+                </DataGridTextColumn>
+                <DataGridTextColumn Visibility="Collapsed" Header="Tier" Binding="{Binding Path=Tier}" Width="20*">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn  IsReadOnly="False" Header="Weight(T)" Binding="{Binding Path=Weight,StringFormat={}{0:0.000},  NotifyOnValidationError=True, ValidatesOnDataErrors=True, ValidatesOnExceptions=True}" Width="30*">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Visibility="Collapsed" Header="Container Type" Binding="{Binding Path=ContainerType}" Width="30*">
+
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
